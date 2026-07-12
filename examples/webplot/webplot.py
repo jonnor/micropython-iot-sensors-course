@@ -1,8 +1,18 @@
 
-import machine
 import asyncio
 import time
 import os
+
+try:
+    import network
+except:
+    # on PC mock machine.ADC and machine.Pin
+    # using https://github.com/planetinnovation/micropython-mock-machine
+    import mock_machine
+    mock_machine.register_as_machine()
+    print("Using mocked 'machine' module")
+
+import machine
 
 from microdot import Microdot
 from microdot import send_file
