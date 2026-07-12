@@ -13,7 +13,7 @@ NOTE: configure the WiFI credentials SSID/PASSWORD
 
 Copy files across
 ```
-mpremote cp index.html data.csv :
+mpremote cp index.html :
 ```
 
 ```

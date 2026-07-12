@@ -4,7 +4,6 @@ import asyncio
 import time
 import os
 
-# mpremote mip install https://raw.githubusercontent.com/miguelgrinberg/microdot/refs/heads/main/src/microdot/microdot.py
 from microdot import Microdot
 from microdot import send_file
 

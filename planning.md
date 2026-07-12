@@ -1,5 +1,21 @@
 
+## Bugs
+
+Windows. No asyncio packages!!
+Was missing in manifest
+Fix by https://github.com/ilovelinux
+
+Windows. No socket module
+https://github.com/micropython/micropython/pull/12810
+
+
+Mac OS Intel. No PyPi package.
+Need CXXFLAGS when building manually
+! Comments i document
+
+
 ## TODO
+
 
 Preparations Sunday tests
 
@@ -15,8 +31,10 @@ Run HTTP examples. Especially webplot
 Before workshop
 
 - Update based on test feedback
-- 
 - Fill in advanced topics
+- Add section about Android. Can use Micro REPL app.
+- Add section about Docker
+- Windows - mention no asyncio/socket. Link MR and refer to Docker
 
 Maybe
 
