@@ -6,8 +6,8 @@
 First course scheduled for [EuroPython 2026](https://ep2026.europython.eu/session/developing-iot-sensors-with-micropython)
 
 ## Materials
-**Slides. COMING**
+**Slides. [LIVE](https://docs.google.com/presentation/d/1z2PNfNIom1EEGwJ_COi4iIwUwMPjqMD49m9fa0pulUM/edit?usp=sharing)**
 
 [Examples](./examples)
 
-[Notes](./notes.md)
+[Notes](./notes)

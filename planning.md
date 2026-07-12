@@ -8,79 +8,50 @@ Fix by https://github.com/ilovelinux
 Windows. No socket module
 https://github.com/micropython/micropython/pull/12810
 
-
 Mac OS Intel. No PyPi package.
-Need CXXFLAGS when building manually
-! Comments i document
+Need CXXFLAGS when building manually.
+Fixes by 
+! Comments in document
 
 
 ## TODO
 
-
-Preparations Sunday tests
-
-- Improve instructions how to download and run examples on PC
-
-Sunday tests
-
-- Test MicroPython package for Windows
-Run HTTP examples. Especially webplot
-- Test HTTP examples also on
-- Try to find one or two volunteers
-
 Before workshop
 
-- Update based on test feedback
-- Fill in advanced topics
+- Update based on test feedback/bugs
+
+- Create thread in Discord #tutorials
+- Split out section about running on PC.
+Motivation. Developing without hardware. Automated testing. CI
+Maybe. Split out installing sections for different OSes
+- Windows - mention no asyncio/socket. Link MR and refer to Docker
+- Fill in some advanced topics
 - Add section about Android. Can use Micro REPL app.
 - Add section about Docker
-- Windows - mention no asyncio/socket. Link MR and refer to Docker
+- NOTE: Filesystem section is very basic. Link to micropython-npyfile ?
+
 
 Maybe
 
+- Windows fix with asyncio? Not able to fix socket though... Probably later. Add test for asyncio included
+- Add diagrams showing the IoT topologies
 - Update Wokwi diagrams to use compatible pinout for LED,MPU6050,analog
-
 
 Later
 
 - Test micropython JIT in Wokwi
 - Try ViperIDE in Firefox - new WebSerial??
 
+## Windows issues
+
 
 
 ## Interaction
 
 Use the conference chat to share resources.
-Back and forth
-
+Back and forth.
 Example. Send link to Wokwi sketches
-
-
-## Outline
-
-!! using Wokwi it is possible to do the physical/IO bits more step wise
-!! critical, that MicroDot/HTTP works in wokwi
-
-Part I: MicroPython development, 1 hour
-
-- Introduction to MicroPython. 5 minutes
-- Developing with MicroPython on PC using Unix port. 15 min
-- Serving data and handling requests using MicroDot HTTP server. 10 min
-- Storing/loading sensor data using on-board filesystem. 5 min
-- Using frontend/browser for user interfaces. 20 min
-- Sending data to external servers using HTTP. 5 min
-
-Part II: Deploying on device
-
-- Deploying our server on device. WiFi setup etc. 30 min
-- Physical input/output using GPIO. 10 min
-- Reading digital sensors using I2C. 10 min
-- Sending data to shared MQTT broker. 10 min
-
-Part III: Open hacking
-
-- Extend the application skeleton.
-Pick one of 3 provided ideas (TBD).
+Thread in Discord
 
 
 ## Notes
@@ -90,7 +61,7 @@ In the process we will covered the following:
 
 - Doing basic physical input/output using GPIO. Analog and digital
 - Reading digital sensors using I2C
-- Storing/loading sensor data using on-board filesystem
+- Storing/loading sensor data using on-board filesystem.
 - Serving data and handling requests using MicroDot HTTP server
 - Using browser with JavaScript for user interfaces
 - Communicating with external servers using HTTP or MQTT
