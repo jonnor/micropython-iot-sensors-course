@@ -1,5 +1,21 @@
 
-## Bugs
+
+## TODO
+
+Maybe
+
+- Fill in some of the advanced topics
+- Add section about Android. Can use Micro REPL app.
+
+Later
+
+- Windows fix with asyncio? Also add test. Not able to fix socket...
+- Add diagrams showing the IoT topologies
+- Update Wokwi diagrams to use compatible pinout for LED,MPU6050,analog
+- Test micropython JIT in Wokwi
+- Try ViperIDE in Firefox - new WebSerial??
+
+## Windows issues
 
 Windows. No asyncio packages!!
 Was missing in manifest
@@ -8,43 +24,24 @@ Fix by https://github.com/ilovelinux
 Windows. No socket module
 https://github.com/micropython/micropython/pull/12810
 
-Mac OS Intel. No PyPi package.
-Need CXXFLAGS when building manually.
-Fixes by 
-! Comments in document
 
 
-## TODO
+## Mac OS Intel issues
 
-Before workshop
+From Vinicius Gubiani Ferreira
+```
+export CXXFLAGS="-std=c++14"
+export LDFLAGS="-undefined dynamic_lookup -Wl,-all_load"
+```
+before the pip install seems to work, including when you start micropython.
 
-- Update based on test feedback/bugs
+Can't be 100% sure, since I used uv:
+```
+uv pip install micropython/ports/python --no-cache
+```
+NOTE: also had to "git clean -fdx" to ensure previous builds didn't leave garbage behind
 
-- Create thread in Discord #tutorials
-- Split out section about running on PC.
-Motivation. Developing without hardware. Automated testing. CI
-Maybe. Split out installing sections for different OSes
-- Windows - mention no asyncio/socket. Link MR and refer to Docker
-- Fill in some advanced topics
-- Add section about Android. Can use Micro REPL app.
-- Add section about Docker
-- NOTE: Filesystem section is very basic. Link to micropython-npyfile ?
-
-
-Maybe
-
-- Windows fix with asyncio? Not able to fix socket though... Probably later. Add test for asyncio included
-- Add diagrams showing the IoT topologies
-- Update Wokwi diagrams to use compatible pinout for LED,MPU6050,analog
-
-Later
-
-- Test micropython JIT in Wokwi
-- Try ViperIDE in Firefox - new WebSerial??
-
-## Windows issues
-
-
+Question: Does the prebuilt wheel packages in jonnor-micropython work for him?
 
 ## Interaction
 
