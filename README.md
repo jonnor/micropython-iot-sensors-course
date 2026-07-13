@@ -10,6 +10,6 @@ First course scheduled for [EuroPython 2026](https://ep2026.europython.eu/sessio
 
 [PDF](<./materials/EuroPython 2026 tutorial - IoT sensors with MicroPython.pdf>)
 
-[Examples](./examples)
+[Code examples](./examples)
 
 [Notes](./notes)
