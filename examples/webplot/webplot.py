@@ -30,6 +30,14 @@ async def index(request):
 async def index(request):
     return send_file('data.csv')
 
+@app.get('/plotly_2.27.0.min.js')
+async def plotly_js(request):
+    return send_file('plotly_2.27.0.min.js')
+
+@app.get('/papaparse_5.4.1.min.js')
+async def papaparse_js(request):
+    return send_file('papaparse_5.4.1.min.js')
+
 async def do_connect(timeout=30.0):
     try:
         import network
