@@ -4,14 +4,22 @@
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <style>
+    .controls {
+      text-align: center;
+      margin-top: 12px;
+    }
+  </style>
 </head>
 
 <body>
-  <label for="autoReloadToggle">
-    <input type="checkbox" id="autoReloadToggle" checked>
-    Auto reload every 10 seconds
-  </label>
   <div id="plot"></div>
+  <div class="controls">
+    <label for="autoReloadToggle">
+      <input type="checkbox" id="autoReloadToggle" checked>
+      Auto reload every 10 seconds
+    </label>
+  </div>
 
   <script>
     const autoReloadToggle = document.getElementById('autoReloadToggle');
