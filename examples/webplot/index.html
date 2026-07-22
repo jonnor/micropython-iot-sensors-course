@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.27.0/plotly.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <style>
+    .controls {
+      text-align: center;
+      margin-top: 12px;
+    }
+  </style>
 </head>
+
 <body>
   <div id="plot"></div>
-  
+  <div class="controls">
+    <label for="autoReloadToggle">
+      <input type="checkbox" id="autoReloadToggle" checked>
+      Auto reload every 10 seconds
+    </label>
+  </div>
+
   <script>
+    const autoReloadToggle = document.getElementById('autoReloadToggle');
+    let autoReloadInterval = null;
+
+    autoReloadToggle.addEventListener('change', (event) => {
+      if (event.target.checked) {
+        autoReloadInterval = setInterval(() => {
+          location.reload();
+        }, 10000);
+      } else if (autoReloadInterval) {
+        clearInterval(autoReloadInterval);
+        autoReloadInterval = null;
+      }
+    });
+
+    if (autoReloadToggle.checked) {
+      autoReloadInterval = setInterval(() => {
+        location.reload();
+      }, 10000);
+    }
+
     // Fetch and plot CSV data
     fetch('data.csv')
       .then(response => response.text())
@@ -15,10 +49,10 @@
         Papa.parse(csvData, {
           header: true,
           dynamicTyping: true,
-          complete: function(results) {
+          complete: function (results) {
             const data = results.data;
             console.log('data loaded', data);
-            
+
 
             const times = data.map(row => row.time);
             const values = data.map(row => row.measurement);
@@ -34,4 +68,5 @@
       });
   </script>
 </body>
+
 </html>
